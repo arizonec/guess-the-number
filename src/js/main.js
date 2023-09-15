@@ -13,7 +13,7 @@ const renderNumber = () => {
 
     if (number > 0) {
         setNumber.setAttribute('disabled', '');
-        setNumber.innerHTML = 'Number was set';
+        setNumber.innerHTML = 'Число загадано!';
         setNumber.style.color = 'red';
         setNumber.style.background = 'gray';
         tryButton.removeAttribute('disabled', '');
@@ -26,13 +26,13 @@ const renderNumber = () => {
 
 const equalNumbers = () => {
     if (input.value > number) {
-        moreLess.innerHTML = 'Setted number is smaller than the entered number, try again!';
+        moreLess.innerHTML = 'Загаданное число меньше введенного, попробуйте еще раз!';
     } else if (input.value < number) {
-        moreLess.innerHTML = 'Setted number is bigger than the entered number, try again!';
+        moreLess.innerHTML = 'Загаданное число больше введенного, попробуйте еще раз!';
     }
 
     counter++;
-    counterElem.innerHTML = `${counter} tries`;
+    counterElem.innerHTML = `${counter} попытки`;
 
     evenNumber();
 
@@ -41,7 +41,7 @@ const equalNumbers = () => {
         modalBack.className = 'modal-back';
         const modal = document.createElement('div');
         modal.className = 'modal';
-        modal.innerHTML = `<div>Congrats! You guessed the number! <br/><br/> The number is ${number}! <br/><br/> It took you ${counter} tries! <br/><br/> <button class="close-btn">Close</button></button></div>`;
+        modal.innerHTML = `<div>Поздравляю! Ты угадал число!<br/><br/> Это было число ${number}! <br/><br/> Тебе понадобилось ${counter} попытки! <br/><br/> <button class="close-btn">Закрыть</button></button></div>`;
         document.body.append(modalBack);
         modalBack.prepend(modal);
 
@@ -63,9 +63,9 @@ const equalNumbers = () => {
 const evenNumber = () => {
     if (counter == 3) {
         if (Number(number) % 2 === 0) {
-            even.innerHTML = 'The number is even';
+            even.innerHTML = 'Число четное';
         } else {
-            even.innerHTML = 'The number is odd'
+            even.innerHTML = 'Число нечетное'
         }
     }
 }
@@ -80,14 +80,14 @@ const validate = () => {
 
 const resetAll = () => {
     setNumber.removeAttribute('disabled', '');
-    setNumber.innerHTML = 'Set number!';
+    setNumber.innerHTML = 'Загадать число!';
     setNumber.style.color = 'White';
     tryButton.setAttribute('disabled', '');
     tryButton.style.background = 'gray';
     tryButton.style.cursor = 'not-allowed';
     number = 0;
     counter = 0;
-    counterElem.innerHTML = `0 tries`;
+    counterElem.innerHTML = `0 попыток`;
     input.value = 0;
     even.innerHTML = '';
     moreLess.innerHTML = '';

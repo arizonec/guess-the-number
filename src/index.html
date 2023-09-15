@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Угадайка</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap"
@@ -14,22 +14,23 @@
 <body>
     <div class="container">
         <div class="guess">
-            <button class="btn-start">Set number!</button>
+            <button class="btn-start">Загадать число!</button>
             <div class="guess__rules">
                 <p>
-                    The computer sets a number from 1 to 100, your task is to calculate this number! <br />
-                    After three attempts, you will be given a hint if the number is even or odd!
+                    Компьютер загадывает случайное число в пределах от 1 до 100. Вам требуется вводить свое
+                    предположение в текстовое поле! <br /> После каждой попытки компьютер сообщает, было ли
+                    загаданное число больше или меньше предложенного!
                 </p>
             </div>
-            <div class="guess__counter">0 tries</div>
+            <div class="guess__counter">0 попыток</div>
             <div class="guess__zone">
                 <div class="guess__input">
                     <input class="input" placeholder="0" type="number">
-                    <button class="btn-try">Try</button>
-                    <button class="btn-reset">Reset</button>
+                    <button class="btn-try">Попытаться</button>
+                    <button class="btn-reset">Начать заного</button>
                 </div>
             </div>
-            <div class="guess__hint">Hints</div>
+            <div class="guess__hint">Подсказки</div>
             <div class="guess__more-less"></div>
             <div class="guess__even"></div>
         </div>
