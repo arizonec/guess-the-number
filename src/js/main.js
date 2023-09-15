@@ -1,5 +1,5 @@
 import '../index.html';
-import '../assets/styles/style.scss';
+import '../assets/styles/style.css';
 import variables from './variables';
 
 const { setNumber, input, even, reset, moreLess, tryButton, counterElem } = variables;
